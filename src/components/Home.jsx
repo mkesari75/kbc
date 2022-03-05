@@ -10,6 +10,7 @@ import next from "../assets/next.mp3";
 import correct from "../assets/correct.mp3";
 import wrong from "../assets/wrong.mp3";
 import Start from "./Start";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -17,12 +18,14 @@ const Container = styled.div`
   display: flex;
   background-color: #020230;
   color: white;
+  ${mobile({ width: "auto", height: "auto" })}
 `;
 
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
+  ${mobile({ width: "auto", height: "100vh" })}
 `;
 
 const Left = styled.div`
@@ -33,6 +36,7 @@ const Left = styled.div`
   background-size: cover;
   display: flex;
   flex-direction: column;
+  ${mobile({ width: "auto" })}
 `;
 
 const Endtext = styled.div`
@@ -45,6 +49,7 @@ const Endtext = styled.div`
   color: gold;
   font-size: 20px;
   text-shadow: 2px 2px black;
+  ${mobile({ padding: "25px" })}
 `;
 
 const Top = styled.div`
@@ -52,6 +57,7 @@ const Top = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  ${mobile({ height: "15%" })}
 `;
 
 const Timer = styled.div`
@@ -98,6 +104,7 @@ const Bottom = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${mobile({ height: "85%" })}
 `;
 
 const Question = styled.div`
@@ -109,6 +116,7 @@ const Question = styled.div`
   font-size: 25px;
   font-weight: 800;
   background: linear-gradient(#100241, black);
+  ${mobile({ fontSize: "20px", width: "70%", fontWeight: "500" })}
 `;
 
 const Options = styled.div`
@@ -117,6 +125,7 @@ const Options = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 60px;
+  ${mobile({ marginTop: "30px" })}
 `;
 
 const Option = styled.div`
@@ -130,6 +139,7 @@ const Option = styled.div`
   font-weight: 300;
   margin: 0 10px 20px 10px;
   cursor: pointer;
+  ${mobile({ width: "50%" })}
 
   &.active {
     background: mediumblue;
@@ -204,6 +214,7 @@ const MoneyList = styled.ul`
   list-style: none;
   width: 90%;
   padding: 10px;
+  ${mobile({ width: "100%" })}
 `;
 
 const MoneyListItem = styled.li`
@@ -214,17 +225,20 @@ const MoneyListItem = styled.li`
   border: ${(props) => props.active && "1px solid gold"};
   border-radius: ${(props) => props.active && "10px "};
   color: ${(props) => props.active && "gold"};
+  ${mobile({ paddingTop: "18px" })}
 `;
 
 const MoneyListItemNumber = styled.span`
   font-size: 18px;
   font-weight: 100;
   margin-right: 15px;
+  ${mobile({ fontSize: "10px" })}
 `;
 
 const MoneyListItemAmount = styled.span`
   font-size: 20px;
   font-weight: 300;
+  ${mobile({ fontSize: "10px" })}
 `;
 
 const Home = () => {
