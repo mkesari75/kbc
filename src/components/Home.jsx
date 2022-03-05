@@ -262,9 +262,15 @@ const Home = () => {
     theme();
   }, [theme]);
 
+  const delay = (duration, callback) => {
+    setTimeout(() => {
+      callback();
+    }, duration);
+  };
+
   useEffect(() => {
-    setQuestion(data[questionNumber - 1]);
     nextQue();
+    setQuestion(data[questionNumber - 1]);
   }, [questionNumber, nextQue]);
 
   useEffect(() => {
@@ -275,12 +281,6 @@ const Home = () => {
     questionNumber > 1 &&
       setEarned(prize.find((m) => m.id === questionNumber - 1).amount);
   }, [questionNumber]);
-
-  const delay = (duration, callback) => {
-    setTimeout(() => {
-      callback();
-    }, duration);
-  };
 
   const handleClick = (ans) => {
     lockQue();
