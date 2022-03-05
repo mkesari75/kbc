@@ -187,7 +187,7 @@ const data = [
         key: 1,
         value: "A)",
         text: "DURYODHANA",
-        correct: true,
+        correct: false,
       },
       {
         key: 2,
@@ -205,7 +205,7 @@ const data = [
         key: 4,
         value: "D)",
         text: "BHIMA",
-        correct: false,
+        correct: true,
       },
     ],
   },
